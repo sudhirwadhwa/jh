@@ -1,0 +1,65 @@
+
+~ is your home
+
+$ pwd is working directory
+
+It shows you the path
+
+The Structure is  command flag arguments
+
+command can have 0 or more flags ( like pwd has no flog)
+
+$ls -a ( shows all files including hidden )
+
+$ls -al ( long listing and two flags l and a are combined)
+
+$cd is change directory
+
+$cd means go to my home
+$cd .. means go one step back
+
+$mkdir dir1  : makes a new direcrtory
+
+$ touch testfile  : create an emplty file testfile
+
+$cp copies
+
+$ cp arg1 arg1
+
+$cp testfile DocumentFolder : copies files from current directory to DocumentFolder
+
+$cp onefile twofile  : makes a copy of file
+
+-r is recurrsive
+
+
+$cp -r document1Folder document2Folder
+
+$ cp -r DOC MOREDOC
+
+rm deletes
+
+$rm -r MOREDOCFOLDERUNWANTED 
+
+delete folder ( and its files )
+
+mv moves files , like renaming
+
+$mv testfile3 DOCUFOLDER
+
+moves a testfile3 from current directory to DOCUFOLDER
+
+$mv afile bfile  : simply renames a file
+
+echo command echoes
+
+$echo Hello Me
+Hello Me
+
+$date
+shows current date , time stamp
+
+$echo $PATH 
+
+shows values in PATH variable
+

@@ -1,0 +1,287 @@
+
+
+How do you list your git configuration
+========================================
+
+
+Sudhirs-MacBook-Pro:datasciencecoursera sudhirwadhwa$ git config --list
+user.name=sudhirwadhwa
+user.email=sudhir.wadhwa@outlook.com
+push.default=simple
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+core.ignorecase=true
+core.precomposeunicode=true
+remote.origin.url=https://github.com/sudhirwadhwa/datasciencecoursera.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.master.remote=origin
+branch.master.merge=refs/heads/master
+Sudhirs-MacBook-Pro:datasciencecoursera sudhirwadhwa$ 
+
+
+another example
+
+
+Sudhirs-MacBook-Pro:pluribus sudhirwadhwa$ git config --list
+user.name=sudhirwadhwa
+user.email=sudhir.wadhwa@outlook.com
+push.default=simple
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+core.ignorecase=true
+core.precomposeunicode=true
+remote.origin.url=git@git.unomena.net:pluribus/pluribus.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.master.remote=origin
+branch.master.merge=refs/heads/master
+Sudhirs-MacBook-Pro:pluribus sudhirwadhwa$ 
+
+==================================================
+
+git init : Intialize Git Repo
+git status: Shows how the Repo has changed ( it can show untracked files present)
+
+git add octocat.txt : You added a file otocat.txt on Stagin Area ( not committed yet)
+
+git status
+
+newfile : octocat.txt   ( git rm --cached filename to Unstage a file) 
+
+
+git status 
+
+untracked : Files are not tracked by Git yet. This usually means new files
+deleted: Files have been deleted and waiting to be removed from git
+
+Staging Area: A place where we can group files togeather before we commit them to git
+Commit : a Snapshot of our Repository. This way we can see the changes we have made
+
+
+git commit -m "Adding new cute file"
+
+1 files changed
+1 Insertion (+)
+
+
+You can also use wild card to add files on staging area
+
+git add '*.txt'
+
+git status
+
+git commit -m "Added all txt files"
+4 files changed
+4 insertion (+)
+create mode 100644
+success
+
+
+git log --summary   : to all information about each commit you have made
+
+The command (above) gives you complete overview of the project. When new files were added , when files are deleted
+
+
+your local copy of Repo is called MASTER
+To push local Repo to github server, command takes remotename and remoteRepo URL
+
+git remote add origin https://github.com/gitfoldername/gitname.git
+
+origin = remote name of Repo
+https://github.com/gitfoldername/gitname.git = remote Repo URL
+
+So now your local Repo ( called Master) is connected to remote Repo ( called origin)
+
+
+Now since we are connected ( local and remote), we should push from local ( Master) to Remote ( origin)
+
+
+
+git push -u origin master
+
+( -u remembers parameter for the next time, so next time , you just use git push
+
+
+
+Now we want to get the changes which were made in our remote Repo located on Github TO local branch ( Master)
+
+git pull origin master
+
+
+
+we want to find out the difference between our last commit and current
+
+git diff HEAD
+
+HEAD means most recent commit
+
+
+How do you find out what is currently added to stage?
+git add otofamily/octodog.txt
+git diff --staged
+
+how do you unstage the file
+
+git reset otofamily/otofamily/octodog.txt
+
+
+How do you change the files back to how they were before the 
+last commit?
+
+git checkout --octocat.txt
+
+go ahead and get rid of all the changes since last commit octocat.txt
+
+
+Branching
+
+Branch : FeatureAbranch
+Branch:  FeatureBbranch
+
+
+
+you seprate codes based on two snashots ( branches) and work on them... and commit to them seprately
+
+As soon as you are ready, you want to merge this branch with the master branch and push to github. When developers are working, they will create their own copy ( Branch) of their code and they can make seprate commit
+
+When they are done, they will merge back with the master branch
+
+
+
+
+git branch cleanup
+git branch : you will see 2 branches , one master and another cleanup
+
+
+you can switch between branches
+
+git checkout cleanup : you are switched to clenaup branch
+
+lets delete files from this branch
+
+git rm '*.txt'
+git commit -m "Removing all cat text files"
+5 deletion (-)
+
+
+If you have a Repo on Github, you can do pull request.
+A pull request allows boss of the project to look through the changes and make comments before deciding to merge the change. Great feature for the remote teams and open source project
+
+Switch back to master
+
+git checkout master
+
+
+so you can merge master and cleaup
+
+
+git merge cleanup : this will merge cleanup branch with the current branch( master)
+
+Merge conflict can happen , decide what code you want to keep
+
+
+you can delete bad feature branch 
+
+git branch -D badfeatureBranch
+
+git branch -d cleanup
+
+Now lets push to remote from Master
+
+git push -u origin master
+
+
+
+git is Free, open source version control tool
+
+Everything stored in your local computer is called Repo
+
+Each commit to a git Repo will be tagged with user name who made the commit
+
+
+$ git config --global user.name "sudhir w"
+$ git config --global user.email "sudhir.w@domain.com"
+
+how do you find your git configuration
+
+$git config --list
+
+Sudhirs-MacBook-Pro:datasciencecoursera sudhirwadhwa$ git config --list
+user.name=sudhirwadhwa
+user.email=sudhir.wadhwa@outlook.com
+push.default=simple
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+core.ignorecase=true
+core.precomposeunicode=true
+remote.origin.url=https://github.com/sudhirwadhwa/datasciencecoursera.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.master.remote=origin
+branch.master.merge=refs/heads/master
+
+
+you dont need github to use git
+
+git local repo ( on your laptop)
+github remote repo ( on web)
+
+
+Github allows you to share your repo to others, access other's repo, save remote copies of your repo on github server for DR
+
+
+Two choice to create a github Repo
+
+1. create from Scratch or 
+2. Fork another users repo
+
+Start a new repo from scratch : give name of your repo, make it public, click initialize the Repo with README, creates a repo on github
+
+
+
+local computer
+
+mkdir playrepo
+cd playrepo
+git init
+git remote add origin http://github.com/name/playrepo.git
+
+
+Forking other's Repo; get a copy of someones Repo
+
+Forking
+
+Go to desired Repo on Github, click on Fork button
+
+Once you fork their repo on your github, you can make a local copy of that on your computer, this process is called cloning / Cloning
+
+$git clone https://github.com/yourname/RepoOfTheOtherGuy.git
+
+this will clone in your working directory ( pwd)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

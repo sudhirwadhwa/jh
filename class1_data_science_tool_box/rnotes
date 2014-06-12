@@ -1,0 +1,474 @@
+To see all the packages installed
+==================================
+
+> library()
+
+Packages in library ‘/Library/Frameworks/R.framework/Versions/3.1/Resources/library’:
+
+base                  The R Base Package
+bitops                Bitwise Operations
+boot                  Bootstrap Functions (originally by Angelo
+                      Canty for S)
+caTools               Tools: moving window statistics, GIF,
+                      Base64, ROC AUC, etc.
+class                 Functions for Classification
+cluster               Cluster Analysis Extended Rousseeuw et al.
+codetools             Code Analysis Tools for R
+colorspace            Color Space Manipulation
+compiler              The R Compiler Package
+datasets              The R Datasets Package
+dichromat             Color Schemes for Dichromats
+digest                Create cryptographic hash digests of R
+                      objects
+evaluate              Parsing and evaluation tools that provide
+                      more details than the default.
+foreign               Read Data Stored by Minitab, S, SAS, SPSS,
+                      Stata, Systat, Weka, dBase, ...
+formatR               Format R Code Automatically
+ggplot2               An implementation of the Grammar of Graphics
+graphics              The R Graphics Package
+grDevices             The R Graphics Devices and Support for
+                      Colours and Fonts
+grid                  The Grid Graphics Package
+gtable                Arrange grobs in tables.
+highr                 Syntax highlighting for R
+httpuv                HTTP and WebSocket server library
+KernSmooth            Functions for kernel smoothing for Wand &
+                      Jones (1995)
+knitr                 A general-purpose package for dynamic report
+                      generation in R
+labeling              Axis Labeling
+lattice               Lattice Graphics
+manipulate            Interactive Plots for RStudio
+markdown              Markdown rendering for R
+MASS                  Support Functions and Datasets for Venables
+                      and Ripley's MASS
+Matrix                Sparse and Dense Matrix Classes and Methods
+methods               Formal Methods and Classes
+mgcv                  Mixed GAM Computation Vehicle with
+                      GCV/AIC/REML smoothness estimation
+mime                  Map filenames to MIME types
+munsell               Munsell colour system
+nlme                  Linear and Nonlinear Mixed Effects Models
+nnet                  Feed-forward Neural Networks and Multinomial
+                      Log-Linear Models
+parallel              Support for Parallel computation in R
+plyr                  Tools for splitting, applying and combining
+                      data
+proto                 Prototype object-based programming
+RColorBrewer          ColorBrewer palettes
+Rcpp                  Seamless R and C++ Integration
+reshape2              Flexibly reshape data: a reboot of the
+                      reshape package.
+RJSONIO               Serialize R objects to JSON, JavaScript
+                      Object Notation
+rpart                 Recursive Partitioning and Regression Trees
+rstudio               Tools and Utilities for RStudio
+scales                Scale functions for graphics.
+shiny                 Web Application Framework for R
+spatial               Functions for Kriging and Point Pattern
+                      Analysis
+splines               Regression Spline Functions and Classes
+stats                 The R Stats Package
+stats4                Statistical Functions using S4 Classes
+stringr               Make it easier to work with strings.
+survival              Survival Analysis
+tcltk                 Tcl/Tk Interface
+tools                 Tools for Package Development
+utils                 The R Utils Package
+xtable                Export tables to LaTeX or HTML
+
+
+Search packages currently loaded
+===================================
+
+> search()
+ [1] ".GlobalEnv"        "tools:rstudio"     "package:stats"    
+ [4] "package:graphics"  "package:grDevices" "package:utils"    
+ [7] "package:datasets"  "package:methods"   "Autoloads"        
+[10] "package:base"   
+
+How would you find available packages?
+========================================
+
+
+> a <- available.packages()
+
+> 
+> head(rownames(a),3)
+
+[1] "A3"       "abc"      "abcdeFBA"
+
+
+> head(rownames(a),100)
+  [1] "A3"                   "abc"                  "abcdeFBA"             "ABCExtremes"         
+  [5] "ABCoptim"             "ABCp2"                "abctools"             "abd"                 
+  [9] "abf2"                 "abind"                "abundant"             "accelerometry"       
+ [13] "AcceptanceSampling"   "ACCLMA"               "accrual"              "accrued"             
+ [17] "ACD"                  "Ace"                  "acepack"              "acer"                
+ [21] "aCGH.Spline"          "acm4r"                "acopula"              "aCRM"                
+ [25] "acs"                  "acss.data"            "acss"                 "ACTCD"               
+ [29] "Actigraphy"           "actuar"               "ActuDistns"           "ada"                 
+ [33] "adabag"               "adagio"               "AdapEnetClass"        "AdaptFit"            
+ [37] "AdaptFitOS"           "AdaptiveSparsity"     "adaptivetau"          "adaptMCMC"           
+ [41] "adaptsmoFMRI"         "adaptTest"            "additivityTests"      "ade4"                
+ [45] "ade4TkGUI"            "adegenet"             "adehabitat"           "adehabitatHR"        
+ [49] "adehabitatHS"         "adehabitatLT"         "adehabitatMA"         "adephylo"            
+ [53] "AdequacyModel"        "ADGofTest"            "adhoc"                "adimpro"             
+ [57] "adlift"               "ADM3"                 "AdMit"                "ads"                 
+ [61] "AER"                  "afex"                 "AFLPsim"              "aftgee"              
+ [65] "AGD"                  "agop"                 "agRee"                "Agreement"           
+ [69] "agricolae"            "agrmt"                "AGSDest"              "ahaz"                
+ [73] "AICcmodavg"           "AID"                  "aidar"                "AIM"                 
+ [77] "akima"                "akmeans"              "alabama"              "ALDqr"               
+ [81] "aLFQ"                 "AlgDesign"            "algstat"              "ALKr"                
+ [85] "allan"                "allanvar"             "allelematch"          "AlleleRetain"        
+ [89] "allelic"              "AllPossibleSpellings" "alm"                  "alphahull"           
+ [93] "alphashape3d"         "alr3"                 "alr4"                 "ALS"                 
+ [97] "ALSCPC"               "AMAP.Seq"             "amap"                 "amei"                
+> 
+
+
+
+
+
+
+How do you install a package in R?
+====================================
+
+> install.packages("ReporteRs")
+also installing the dependencies ‘ReporteRsjars’, ‘rJava’, ‘base64’
+
+trying URL 'http://cran.rstudio.com/bin/macosx/mavericks/contrib/3.1/ReporteRsjars_0.0.1.tgz'
+Content type 'application/x-gzip' length 5012813 bytes (4.8 Mb)
+opened URL
+==================================================
+downloaded 4.8 Mb
+
+trying URL 'http://cran.rstudio.com/bin/macosx/mavericks/contrib/3.1/rJava_0.9-6.tgz'
+Content type 'application/x-gzip' length 600621 bytes (586 Kb)
+opened URL
+==================================================
+downloaded 586 Kb
+
+trying URL 'http://cran.rstudio.com/bin/macosx/mavericks/contrib/3.1/base64_1.1.tgz'
+Content type 'application/x-gzip' length 75806 bytes (74 Kb)
+opened URL
+==================================================
+downloaded 74 Kb
+
+trying URL 'http://cran.rstudio.com/bin/macosx/mavericks/contrib/3.1/ReporteRs_0.5.5.tgz'
+Content type 'application/x-gzip' length 808502 bytes (789 Kb)
+opened URL
+==================================================
+downloaded 789 Kb
+
+
+The downloaded binary packages are in
+	/var/folders/ks/vvq5_4b5099c8n69vxsnrxzc0000gn/T//RtmpOECtFi/downloaded_packages
+
+======================================================
+
+> install.packages("devtools")
+also installing the dependencies ‘httr’, ‘RCurl’, ‘memoise’, ‘whisker’
+
+trying URL 'http://cran.rstudio.com/bin/macosx/mavericks/contrib/3.1/httr_0.3.tgz'
+Content type 'application/x-gzip' length 329766 bytes (322 Kb)
+opened URL
+==================================================
+downloaded 322 Kb
+
+trying URL 'http://cran.rstudio.com/bin/macosx/mavericks/contrib/3.1/RCurl_1.95-4.1.tgz'
+Content type 'application/x-gzip' length 718801 bytes (701 Kb)
+opened URL
+==================================================
+downloaded 701 Kb
+
+trying URL 'http://cran.rstudio.com/bin/macosx/mavericks/contrib/3.1/memoise_0.2.1.tgz'
+Content type 'application/x-gzip' length 14377 bytes (14 Kb)
+opened URL
+==================================================
+downloaded 14 Kb
+
+trying URL 'http://cran.rstudio.com/bin/macosx/mavericks/contrib/3.1/whisker_0.3-2.tgz'
+Content type 'application/x-gzip' length 47776 bytes (46 Kb)
+opened URL
+==================================================
+downloaded 46 Kb
+
+trying URL 'http://cran.rstudio.com/bin/macosx/mavericks/contrib/3.1/devtools_1.5.tgz'
+Content type 'application/x-gzip' length 248738 bytes (242 Kb)
+opened URL
+==================================================
+downloaded 242 Kb
+
+
+The downloaded binary packages are in
+	/var/folders/ks/vvq5_4b5099c8n69vxsnrxzc0000gn/T//RtmpZtwcxk/downloaded_packages
+
+
+
+
+
+
+=======================================================
+
+How do you install packages in R Studio?
+========================================
+
+Toos -> Install Package
+
+
+How do you install packages from BioConductor?
+=================================================
+
+> 
+> source ("http://bioconductor.org/biocLite.R")
+
+trying URL 'http://www.bioconductor.org/packages/2.14/bioc/bin/macosx/mavericks/contrib/3.1/BiocInstaller_1.14.2.tgz'
+Content type 'application/x-gzip' length 50164 bytes (48 Kb)
+opened URL
+==================================================
+downloaded 48 Kb
+
+
+The downloaded binary packages are in
+	/var/folders/ks/vvq5_4b5099c8n69vxsnrxzc0000gn/T//RtmpOECtFi/downloaded_packages
+Bioconductor version 2.14 (BiocInstaller 1.14.2),
+  ?biocLite for help
+
+
+
+> biocLite()
+BioC_mirror: http://bioconductor.org
+Using Bioconductor version 2.14 (BiocInstaller
+  1.14.2), R version 3.1.0.
+Installing package(s) 'Biobase' 'IRanges'
+  'AnnotationDbi'
+also installing the dependencies ‘BiocGenerics’, ‘GenomeInfoDb’, ‘DBI’, ‘RSQLite’
+
+trying URL 'http://bioconductor.org/packages/2.14/bioc/bin/macosx/mavericks/contrib/3.1/BiocGenerics_0.10.0.tgz'
+Content type 'application/x-gzip' length 400960 bytes (391 Kb)
+opened URL
+==================================================
+downloaded 391 Kb
+
+trying URL 'http://bioconductor.org/packages/2.14/bioc/bin/macosx/mavericks/contrib/3.1/GenomeInfoDb_1.0.2.tgz'
+Content type 'application/x-gzip' length 235566 bytes (230 Kb)
+opened URL
+==================================================
+downloaded 230 Kb
+
+trying URL 'http://cran.rstudio.com/bin/macosx/mavericks/contrib/3.1/DBI_0.2-7.tgz'
+Content type 'application/x-gzip' length 272033 bytes (265 Kb)
+opened URL
+==================================================
+downloaded 265 Kb
+
+trying URL 'http://cran.rstudio.com/bin/macosx/mavericks/contrib/3.1/RSQLite_0.11.4.tgz'
+Content type 'application/x-gzip' length 1827021 bytes (1.7 Mb)
+opened URL
+==================================================
+downloaded 1.7 Mb
+
+trying URL 'http://bioconductor.org/packages/2.14/bioc/bin/macosx/mavericks/contrib/3.1/Biobase_2.24.0.tgz'
+Content type 'application/x-gzip' length 2355445 bytes (2.2 Mb)
+opened URL
+==================================================
+downloaded 2.2 Mb
+
+trying URL 'http://bioconductor.org/packages/2.14/bioc/bin/macosx/mavericks/contrib/3.1/IRanges_1.22.8.tgz'
+Content type 'application/x-gzip' length 1870994 bytes (1.8 Mb)
+opened URL
+==================================================
+downloaded 1.8 Mb
+
+trying URL 'http://bioconductor.org/packages/2.14/bioc/bin/macosx/mavericks/contrib/3.1/AnnotationDbi_1.26.0.tgz'
+Content type 'application/x-gzip' length 4635093 bytes (4.4 Mb)
+opened URL
+==================================================
+downloaded 4.4 Mb
+
+
+The downloaded binary packages are in
+	/var/folders/ks/vvq5_4b5099c8n69vxsnrxzc0000gn/T//RtmpOECtFi/downloaded_packages
+Old packages: 'MASS', 'Rcpp'
+Update all/some/none? [a/s/n]: 
+a
+trying URL 'http://cran.rstudio.com/bin/macosx/mavericks/contrib/3.1/MASS_7.3-33.tgz'
+Content type 'application/x-gzip' length 1054938 bytes (1.0 Mb)
+opened URL
+==================================================
+downloaded 1.0 Mb
+
+trying URL 'http://cran.rstudio.com/bin/macosx/mavericks/contrib/3.1/Rcpp_0.11.2.tgz'
+Content type 'application/x-gzip' length 2718706 bytes (2.6 Mb)
+opened URL
+==================================================
+downloaded 2.6 Mb
+
+
+The downloaded binary packages are in
+	/var/folders/ks/vvq5_4b5099c8n69vxsnrxzc0000gn/T//RtmpOECtFi/downloaded_packages
+> 
+
+
+
+
+> biocLite(c("GeonmicFeatures","AnnotationDbi"))
+
+
+
+BioC_mirror: http://bioconductor.org
+Using Bioconductor version 2.14 (BiocInstaller
+  1.14.2), R version 3.1.0.
+Installing package(s) 'GeonmicFeatures'
+  'AnnotationDbi'
+trying URL 'http://bioconductor.org/packages/2.14/bioc/bin/macosx/mavericks/contrib/3.1/AnnotationDbi_1.26.0.tgz'
+Content type 'application/x-gzip' length 4635093 bytes (4.4 Mb)
+opened URL
+==================================================
+downloaded 4.4 Mb
+
+
+The downloaded binary packages are in
+	/var/folders/ks/vvq5_4b5099c8n69vxsnrxzc0000gn/T//RtmpOECtFi/downloaded_packages
+Warning message:
+package ‘GeonmicFeatures’ is not available (for R version 3.1.0) 
+
+
+
+
+How do find packages?
+========================
+
+> find.package("devtools")
+[1] "/Library/Frameworks/R.framework/Versions/3.1/Resources/library/devtools"
+> find.package("devtools32")
+Error in find.package("devtools32") : 
+  there is no package called ‘devtools32’
+
+How do you install packages?
+> install.packages("devtools")
+trying URL 'http://cran.rstudio.com/bin/macosx/mavericks/contrib/3.1/devtools_1.5.tgz'
+Content type 'application/x-gzip' length 248738 bytes (242 Kb)
+opened URL
+==================================================
+downloaded 242 Kb
+
+
+The downloaded binary packages are in
+	/var/folders/ks/vvq5_4b5099c8n69vxsnrxzc0000gn/T//RtmpZtwcxk/downloaded_packages
+> 
+
+how do you load a library?
+library(ggplot2)
+
+
+how do you find a functions?
+> find_rtools()
+[1] TRUE
+> 
+
+
+
+what is CRAN?
+Comprehensive R Archive Network
+
+With R you get base system
+
+R is useful because it has large collection of packages to extend the basic functionality of R
+
+R packages are developed and Published by larger R community
+
+Primary location to get R packages is CRAN
+
+For Bioloigal applications, Many packages are available @ BioConductor Project
+
+
+How do you find available packages on CRAN , use available.packages() function
+
+a <- available.packages()
+head ( rownames(a), 3)
+
+will show 3 packges row names
+
+How do you find default packages in R
+
+> getOption ("defaultPackages")
+
+R package is collection of R functions, data and compiled code
+
+library() to see all the packages installed: There are 5200+ packages
+you can also check Task view list: Group togeather packages to area of your interest
+
+
+to install a single package
+
+install.package("slidify")
+
+Any package on which this package depends on will also be downloaded and installed
+
+How to install mutiple packages
+
+install.packages( c("slidify", "ggplot2", "devtools") )
+
+Use the c vector, lower case c
+
+install.packages ( c("pkg1","pkg2","pkgn"))
+
+
+
+
+
+How do you install a package from BioConductor
+
+source ("http://bioconductor.org/biocLite.R")
+biocLite()
+
+
+Installing a package in R does not make it available , you need to load the package.
+
+library(ggplot2)
+
+will load the ggplot2 package 
+Dont put the name of the package in quote
+
+Dependcies packages will be loaded as well
+
+
+After you load the package , how do you know it is there loaded?
+
+search()
+
+> search()
+ [1] ".GlobalEnv"        "package:ggplot2"   "package:devtools"  "tools:rstudio"     "package:stats"     "package:graphics"  "package:grDevices" "package:utils"    
+ [9] "package:datasets"  "package:methods"   "Autoloads"         "package:base"     
+> 
+> 
+
+ 
+
+
+
+
+
+
+
+
+> install.packages("KernSmooth")
+trying URL 'http://cran.rstudio.com/bin/macosx/mavericks/contrib/3.1/KernSmooth_2.23-12.tgz'
+Content type 'application/x-gzip' length 91267 bytes (89 Kb)
+opened URL
+==================================================
+downloaded 89 Kb
+
+
+The downloaded binary packages are in
+	/var/folders/ks/vvq5_4b5099c8n69vxsnrxzc0000gn/T//RtmpZtwcxk/downloaded_packages
+> library(KernSmooth)
+KernSmooth 2.23 loaded
+Copyright M. P. Wand 1997-2009
+
+
+

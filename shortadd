@@ -1,0 +1,28 @@
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ git status
+On branch master
+Your branch is up-to-date with 'jh/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	quickadd
+
+nothing added to commit but untracked files present (use "git add" to track)
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ 
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ 
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ git add quickadd 
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ git commit -m "adding quickadd"
+[master f5d1471] adding quickadd
+ 1 file changed, 40 insertions(+)
+ create mode 100644 quickadd
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ git push -u jh master
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 804 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+To https://github.com/sudhirwadhwa/jh.git
+   86f6111..f5d1471  master -> master
+Branch master set up to track remote branch master from jh.
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ 
+
