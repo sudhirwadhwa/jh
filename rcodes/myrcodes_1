@@ -1,0 +1,113 @@
+## sudhir.wadhwa@gmail.com
+## sudhir.wadhwa@outlook.com
+## June 12, 2014
+
+write a fucntion in R to say Hello.
+
+say.hello <- function()
+{
+  print ("hello me")
+}
+
+===============================================
+Console
+
+Just the name will show you complete fucntion
+> say.hello
+function()
+{
+  print ("hello me")
+}
+
+Run the say.hello
+
+> say.hello()
+[1] "hello me"
+> 
+===============================================
+
+
+Write a function which returns a double of input you give
+( e.g.  you give 3 , function gives back 3*2 which is 6)
+
+
+==========  double.R ============
+
+say.double <- function(d)
+{
+  return (d*2)
+}
+
+
+
+
+
+> say.double
+function(d)
+{
+  return (d*2)
+}
+> say.double(3)
+[1] 6
+> say.double(90)
+[1] 180
+> 
+
+==================================================================================
+write a fucntion which takes input as first name and last name 
+(a) prints the first name and last name in the order of ( last name and first name)
+If last name is missing , function will always use "Wadhwa"
+
+
+
+say.firstandlast <- function(first, last ="Wadhwa")
+{
+  sprintf("%s %s ", last,first)
+}
+
+
+> say.firstandlast
+function(first, last ="Wadhwa")
+{
+  sprintf("%s %s ", last,first)
+}
+> say.firstandlast("james")
+[1] "Wadhwa james "
+> say.firstandlast("james","Bond")
+[1] "Bond james "
+> 
+
+
+
+(b) 
+if there are more then 2 arguments provided to fucntion
+(for example , james , bond, shoots, fast), it simply ignore shoots and fast,
+output is simply bond james
+
+
+
+say.firstandlast <- function(first, last ="Wadhwa",...)
+{
+  sprintf("%s %s ", last,first)
+}
+
+
+
+> say.firstandlast
+function(first, last ="Wadhwa",...)
+{
+  sprintf("%s %s ", last,first)
+}
+> say.firstandlast("Nan","Ku")
+[1] "Ku Nan "
+> say.firstandlast("Nan","Ku","machine")
+[1] "Ku Nan "
+> say.firstandlast("Nan","Ku","machine","swift")
+[1] "Ku Nan "
+> say.firstandlast("Ku")
+[1] "Wadhwa Ku "
+
+
+
+
+
