@@ -1,0 +1,121 @@
+
+#This is how I setup git and github
+#Directory is jh = local computer , jh.git on github
+
+
+
+##Step 1 : Setup local Repo , I will call it jh on my laptop
+jh = john hopkins
+
+My goal is to add classes in this one and add notes for each class
+
+
+Sudhirs-MacBook-Pro:datatrack sudhirwadhwa$ mkdir jh
+Sudhirs-MacBook-Pro:datatrack sudhirwadhwa$ cd jh
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ pwd
+/Users/sudhirwadhwa/datatrack/jh
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ ls
+
+##Step2 : Init the git Repo ( I am in jh directory, pwd = /Users/sudhirwadhwa/datatrack/jh)
+
+
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ git init
+Initialized empty Git repository in /Users/sudhirwadhwa/datatrack/jh/.git/
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ 
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ ls -al
+total 0
+drwxr-xr-x   3 sudhirwadhwa  staff  102 Jun 12 14:39 .
+drwxr-xr-x   7 sudhirwadhwa  staff  238 Jun 12 14:39 ..
+drwxr-xr-x  10 sudhirwadhwa  staff  340 Jun 12 14:39 .git
+
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ git config --list
+user.name=sudhirwadhwa
+user.email=sudhir.wadhwa@outlook.com
+push.default=simple
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+core.ignorecase=true
+core.precomposeunicode=true
+
+## I created an empty file , touch a in /Users/sudhirwadhwa/datatrack/jh
+
+
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	a
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+## Let me add my file a to staging area
+
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ 
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ 
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ git add a
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   a
+
+
+
+## Let me commit to the work so far 
+
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ git commit -m "adding blank file"
+[master (root-commit) 1c4c835] adding blank file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 a
+
+## Now commit done on local branch , 
+## I also wen ahead and created github account and created a Repo there called jh.git
+## My goal is to link my jh ( local repo on my laptop) to github Repo ( remote jh.git)
+
+
+## in order to sync , let me pull from remote to local first
+## Because remote has Readme.MD file 
+
+
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ git pull -u jh master
+warning: no common commits
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0)
+Unpacking objects: 100% (3/3), done.
+From https://github.com/sudhirwadhwa/jh
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> jh/master
+Merge made by the 'recursive' strategy.
+ README.md | 4 ++++
+ 1 file changed, 4 insertions(+)
+ create mode 100644 README.md
+
+## Now I am going to push from local to remote
+
+
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ git push -u jh master
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 499 bytes | 0 bytes/s, done.
+Total 5 (delta 0), reused 0 (delta 0)
+To https://github.com/sudhirwadhwa/jh.git
+   804725e..164e417  master -> master
+Branch master set up to track remote branch master from jh.
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ 
+
+
+
+
+
+
