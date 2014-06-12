@@ -1,0 +1,66 @@
+commit f64386a173c73b42996d4f93623434c59e79bf49
+Author: sudhirwadhwa <sudhir.wadhwa@outlook.com>
+Date:   Thu Jun 12 15:34:13 2014 -0700
+
+    R Code v1
+
+ create mode 100644 rcodes/myrcodes_1
+
+commit f830b7eb0917207e181643c3f3b9d62e379ee51d
+Author: sudhirwadhwa <sudhir.wadhwa@outlook.com>
+Date:   Thu Jun 12 15:23:20 2014 -0700
+
+    class1 data science notes uploaded - sudhir.wadhwa@gmail.com
+
+ create mode 100644 class1_data_science_tool_box/datanotes
+ create mode 100644 class1_data_science_tool_box/gitnotes
+ create mode 100644 class1_data_science_tool_box/rnotes
+ create mode 100644 class1_data_science_tool_box/unixnotes
+ create mode 100644 shortadd
+
+commit f5d147178f9e45b5fc9182e121bf2fa3c2fd18f3
+Author: sudhirwadhwa <sudhir.wadhwa@outlook.com>
+Date:   Thu Jun 12 15:18:03 2014 -0700
+
+    adding quickadd
+
+ create mode 100644 quickadd
+
+commit 86f61117450eb6eeb0c1065116464538b729c581
+Author: sudhirwadhwa <sudhir.wadhwa@outlook.com>
+Date:   Thu Jun 12 15:15:36 2014 -0700
+
+    adding addandpushingit
+
+ create mode 100644 addandpushingit
+
+commit cbfd30305090b5028efb44dbacfb9e8f472bf431
+Author: sudhirwadhwa <sudhir.wadhwa@outlook.com>
+Date:   Thu Jun 12 15:08:15 2014 -0700
+
+    adding setupgit file
+
+ create mode 100644 setupgit
+
+commit 164e4176bf8c73e149c90568ecb48f035bb92d13
+Merge: 1c4c835 804725e
+Author: sudhirwadhwa <sudhir.wadhwa@outlook.com>
+Date:   Thu Jun 12 14:50:32 2014 -0700
+
+    Merge branch 'master' of https://github.com/sudhirwadhwa/jh
+
+commit 1c4c835d508955cec6fcddf46b631e16f553f1e1
+Author: sudhirwadhwa <sudhir.wadhwa@outlook.com>
+Date:   Thu Jun 12 14:49:08 2014 -0700
+
+    adding blank file
+
+ create mode 100644 a
+
+commit 804725e786fa26c73da3528f09fa66e15a4d1ee0
+Author: sudhirwadhwa <sudhir.wadhwa@outlook.com>
+Date:   Thu Jun 12 14:42:43 2014 -0700
+
+    Initial commit
+
+ create mode 100644 README.md
