@@ -1,0 +1,70 @@
+## I created a file setupgit in my current directory 
+
+
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ git status
+On branch master
+Your branch is up-to-date with 'jh/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	setupgit
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+
+# let me add this file to staging area
+
+
+$ git add setupgit
+
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ git status
+On branch master
+Your branch is up-to-date with 'jh/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   setupgit
+
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ 
+
+## let me commit my work
+
+
+iSudhirs-MacBook-Pro:jh sudhirwadhwa$ git commit -m "adding setupgit file"
+[master cbfd303] adding setupgit file
+ 1 file changed, 121 insertions(+)
+ create mode 100644 setupgit
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ git status
+On branch master
+Your branch is ahead of 'jh/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working directory clean
+
+## let me push my work to GitHub
+
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ git push -u jh master
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.55 KiB | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/sudhirwadhwa/jh.git
+   164e417..cbfd303  master -> master
+Branch master set up to track remote branch master from jh.
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ git status
+On branch master
+Your branch is up-to-date with 'jh/master'.
+
+nothing to commit, working directory clean
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ 
+
+
+
+
+
+
+
+
