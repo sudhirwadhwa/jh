@@ -8,7 +8,8 @@ Causal
 Mechanistic
 
 
-Descriptive
+Descriptive Analysis
+-----------------------
 
 Goal is to describe the data , you are not trying to predics anything.
 Goal = Describe the set of data
@@ -16,6 +17,202 @@ Goal = Describe the set of data
 This First Kind of data analysis performed
 commonly applied to census data
 description and interpretation are 2 different steps
-desrciption can usually not be generalized without additional statisticalmodeling
+desrciption can usually not be generalized without additional statistical modeling
+
+Describes the data, for example: How widely dispersed is the data? Are there lot of different values? Are many of the values the same? what velue is in the middle of the data? where does a particular data stand with rspect to other values in the data set?
+
+Descriptive Analysis results can be show using graphics - Histogram, bar , pie charts. table 
+
+Population = avg height of all men in CA
+
+Inferential Statistics : ways of analyzing the data that allows you to make a conculsion about weather a hypothesis was supported by the results.
+
+Inference : to draw conclusion from clues in the environment
+
+Hypothesis: educated guess
+
+t-test : compare avg scores between 2 groups 
+
+ANOVA : Analysis of varaince : 3 or more groups
+
+
+Prediction is more challanging than inference
+
+ 
+
+
+Exploratory Analysis
+====================
+
+Goal: Fing the relationships you did not know about
+
+Exploratory models are good for discovering new connections
+They are also useful for defining future studies
+Exploratory analyses are usually not the final say
+Exploratory analyses alone should not be used for generalizing / predicting
+
+correlation does not imply causation
+
+
+
+Inferential
+===============
+
+Goal ; take small amount of data ( sample) and extroplate to general (population)  small sample of data have to say something about a bigger population
+
+Inference is commonly the goal of statistical model
+Inference involves estimating quantity you care and uncertainity about your estimate
+
+Depends of population and sample 
+
+
+Predictive
+===============
+
+challanging
+
+Use data collected on one Object
+Predict another object
+
+If X predicts Y , does not mean X causes Y
+Measure the right variables to get accurate Prediction
+
+
+Causal
+===============
+
+If change the value of M , what will happen to N 
+
+Randomized Studies are required to identify causation
+
+Causal relationship are idenfied using Avergae effects
+(e.g. if we use this drug, on an average , please respond....)
+
+Causal "gold" standard
+
+
+
+Mechanistic
+===========
+
+Exact changes in variables that leads to exact changes in other vaiables for individual objects
+
+Incedible hard to infer
+modeled by determinstic set of equations 
+random component of the data is measurement error
+
+
+
+
+
+
+
+
+Prediction Key quantities
+
+
+
+Pr ( Correct Outcome) = Accuracy
+Pr ( Positive Test | disease) = sensitivity
+
+pr (negative Test | no disease) = specificity
+
+pr(disease | positive test) = Positive Predictive Value
+pr( no disease | Negative Value) = Negative Predictive Value
+
+
+good experiment = have replication , measure variability
+
+good experiment = transparent in terms of code and data
+
+
+prediction is not inference
+
+Data Dredging: Data dredging, sometimes referred to as "data fishing" is a data mining practice in which large volumes of data are analyzed seeking any possible relationships between data. The traditional scientific method, in contrast, begins with a hypothesis and follows with an examination of the data. Sometimes conducted for unethical purposes, data dredging often circumvents traditional data mining techniques and may lead to premature conclusions. Data dredging is sometimes described as "seeking more information from a data set than it actually contains."
+
+
+Inferential: Do math on the sample and make conclusion ( inferences)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Experimental Design
+
+Have a Plan for Data and Code Sharing
+Example: github.com
+Example: figshare.com ( Share your data)
+
+
+Formulate your question in Advance
+
+example: Does changing the test on your website improve domnation?
+Experiment:
+1. Randomly show visitos one version or other
+2. Measure how much they donate
+3. Determine which one is better
+
+
+Statistical Inference
+
+Poplulation = Complete possible data set (e.g. all in US)
+Sample = Subset of Data
+
+Descriptive Statistics = calculate AVG based on Sample data
+
+Inferential Statistics = Take the Desciptive Stat and apply to see if the same will apply to large data set ( Population)
+
+if the variability is high between "Signup" version of site as compared to "Donate" version of site , then it makes sense to adopt one version as compared to another
+
+
+Cofounding :  Shows -
+
+Variable "Age" might be "Confounder" for variable "Shoe" and "Literacy"
+Pay attention to all the variables which are cauring corelation
+"Corelation" is not "Causation"
+
+Observed corelation may not be actual relationship, it might be bacause of a "confounder"
+
+In statistics, a confounding variable (also confounding factor, a confound, or confounder) is an extraneous variable in a statistical model that correlates (directly or inversely) with both the dependent variable and the independent variable.
+
+How to do deal with "confounders"?
+
+1. Fix them : example show "obama 2012" on both a / b sites
+2. Stratify : use both web site colors with equal phrases
+3. If you cannot fix a variable , cannot stratify it , you need to Randomize it. Randomize the confounding variable , so its impact is diluted
+
+
+
+
+
+
+
+
+
+
+
 
 

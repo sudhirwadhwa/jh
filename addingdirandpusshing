@@ -1,0 +1,101 @@
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ pwd
+/Users/sudhirwadhwa/datatrack/jh
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ ls
+README.md			class1_data_science_tool_box	setupgit
+a				quickadd			shortadd
+addandpushingit			rcodes
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ ls -l
+total 40
+-rw-r--r--  1 sudhirwadhwa  staff    32 Jun 12 14:50 README.md
+-rw-r--r--  1 sudhirwadhwa  staff     0 Jun 12 14:41 a
+-rw-r--r--  1 sudhirwadhwa  staff  1690 Jun 12 15:14 addandpushingit
+drwxr-xr-x  7 sudhirwadhwa  staff   238 Jun 12 15:36 class1_data_science_tool_box
+-rw-r--r--  1 sudhirwadhwa  staff  1342 Jun 12 15:17 quickadd
+drwxr-xr-x  3 sudhirwadhwa  staff   102 Jun 12 15:33 rcodes
+-rw-r--r--  1 sudhirwadhwa  staff  3370 Jun 12 15:04 setupgit
+-rw-r--r--  1 sudhirwadhwa  staff  1018 Jun 12 15:18 shortadd
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ mkdir class2_R_Programming
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ mkdir class3_Getting_and_Cleaning Data
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ mkdir class4_Exploratory_Data_Analysis
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ mkdir class5_Reproducible_Research
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ mkdir class6_Statistical_Inference
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ mkdir class7_Regression_Models
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ mkdir class8_Practical_Machine_Learning
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ mkdir class9_Developing_Data_Products
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ mkdir class10_Capstone_Project
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ pwd
+/Users/sudhirwadhwa/datatrack/jh
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ git status
+On branch master
+Your branch is up-to-date with 'jh/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	class1_data_science_tool_box/summrylog
+
+nothing added to commit but untracked files present (use "git add" to track)
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ pwd
+/Users/sudhirwadhwa/datatrack/jh
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ ls
+Data					class5_Reproducible_Research
+README.md				class6_Statistical_Inference
+a					class7_Regression_Models
+addandpushingit				class8_Practical_Machine_Learning
+class10_Capstone_Project		class9_Developing_Data_Products
+class1_data_science_tool_box		quickadd
+class2_R_Programming			rcodes
+class3_Getting_and_Cleaning		setupgit
+class4_Exploratory_Data_Analysis	shortadd
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ git add class2_R_Programming/
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ git add class3_Getting_and_Cleaning/
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ git add class4_Exploratory_Data_Analysis/
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ git add class5_Reproducible_Research/
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ git add class6_Statistical_Inference/
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ git add class7_Regression_Models/
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ git add class8_Practical_Machine_Learning/
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ git add class9_Developing_Data_Products/
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ git add class10_Capstone_Project/
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ 
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ git commit -m "adding frameworks for classes 1 to 10"
+On branch master
+Your branch is up-to-date with 'jh/master'.
+
+Untracked files:
+	class1_data_science_tool_box/summrylog
+
+nothing added to commit but untracked files present
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ git add class1
+class10_Capstone_Project/     class1_data_science_tool_box/ 
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ git add class1_data_science_tool_box/summrylog 
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ pwd
+/Users/sudhirwadhwa/datatrack/jh
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ git status
+On branch master
+Your branch is up-to-date with 'jh/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   class1_data_science_tool_box/summrylog
+
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ git commit -m "adding summary log"
+[master 6bab30b] adding summary log
+ 1 file changed, 66 insertions(+)
+ create mode 100644 class1_data_science_tool_box/summrylog
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ git status
+On branch master
+Your branch is ahead of 'jh/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working directory clean
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ git push
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 940 bytes | 0 bytes/s, done.
+Total 4 (delta 2), reused 0 (delta 0)
+To https://github.com/sudhirwadhwa/jh.git
+   f64386a..6bab30b  master -> master
+Sudhirs-MacBook-Pro:jh sudhirwadhwa$ 
+

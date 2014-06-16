@@ -110,4 +110,86 @@ function(first, last ="Wadhwa",...)
 
 
 
+write a simple R program to print 1 to 10
+
+x <- c(1,2,4,8,16)
+for (loop in x){
+  cat("value of loop: ",loop,"\n");  
+}
+
+
+## i want to read the R code from a file
+
+> source("loopi.R")
+Error in file(filename, "r", encoding = encoding) : 
+  cannot open the connection
+In addition: Warning message:
+In file(filename, "r", encoding = encoding) :
+  cannot open file 'loopi.R': No such file or directory
+
+## Now I gave the full path
+
+
+> source("~/Documents/loopi.R")
+value of loop:  1 
+value of loop:  2 
+value of loop:  4 
+value of loop:  8 
+value of loop:  16 
+> 
+==============================
+
+hun <- seq(1:10)
+hun
+for (lop in hun)
+{
+  cat (lop,"\n")
+}
+
+
+
+
+Write a function which prints a Table of given number
+
+example
+
+givemetable(7)
+
+7*1 = 7
+7*2 = 14 and so on
+7*10 = 70
+
+
+
+givemetable <- function(n)
+{
+  for (lop in 1:10)
+  {
+    cat (n*lop,"\n")
+  }
+  
+}
+
+
+> givemetable (14)
+14 
+28 
+42 
+56 
+70 
+84 
+98 
+112 
+126 
+140 
+
+
+
+
+
+
+
+
+
+
 
