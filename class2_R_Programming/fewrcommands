@@ -1,0 +1,199 @@
+
+
+
+Coulmn names are
+Subject  Eye.Color  Height  Hand.Span  Sex  Handedness
+
+
+lets only get the columns we are interested in
+people1<-subset(people, select=c(Hand.Span, Sex, Eye.Color))
+
+remove 1st, 3rd and 6th column
+people1<-people[-c(1,3,6)]
+
+keep 2nd, 4th and 1st column
+people1<-people[c(2,4,1)]
+
+for all "people" with Height < 165 
+subset(people, Eye.Color=="Brown" & Height<165)
+
+people with Height < 165 but get Hand.Span and Height column only
+subset(people, Height<165, select=c(Hand.Span, Height))
+
+people with Eye.color either Brown or Green
+subset(people, Eye.Color %in% c("Brown", "Green"))
+
+
+# Poker winnings from Monday to Friday
+poker_vector = c(140,-50,20,-120,240)
+# Roulette winnings form Monday to Friday
+roulette_vector = c(-24,-50,100,-350,10)
+
+# Name poker and roulette
+days_vector = c("Monday","Tuesday","Wednesday","Thursday","Friday")
+names(roulette_vector) = days_vector
+names(poker_vector) = days_vector
+
+total_poker = sum(poker_vector)
+
+# Up to you now: assign the correct values to: 
+total_roulette = sum(roulette_vector)
+total_week = total_poker + total_roulette
+
+
+
+========
+
+# Poker winnings from Monday to Friday
+poker_vector = c(140,-50,20,-120,240)
+# Roulette winnings form Monday to Friday
+roulette_vector = c(-24,-50,100,-350,10)
+
+# Name poker and roulette
+days_vector = c("Monday","Tuesday","Wednesday","Thursday","Friday")
+names(roulette_vector) = days_vector
+names(poker_vector) = days_vector
+
+# Calculate total gains for poker and roulette
+total_poker = sum(poker_vector)
+total_roulette = sum(roulette_vector)
+
+# Check if you realized higher total gains in poker then in roulette 
+answer = c (total_poker > total_roulette)
+
+
+========
+
+# Poker winnings from Monday to Friday
+poker_vector = c(140,-50,20,-120,240)
+# Roulette winnings form Monday to Friday
+roulette_vector = c(-24,-50,100,-350,10)
+# Name poker and roulette
+days_vector = c("Monday","Tuesday","Wednesday","Thursday","Friday")
+names(roulette_vector) = days_vector
+names(poker_vector) = days_vector
+
+# Define new variable based on a selection
+poker_wednesday = poker_vector[3]
+
+
+=============
+
+
+# Poker winnings from Monday to Friday
+poker_vector = c(140,-50,20,-120,240)
+# Roulette winnings form Monday to Friday
+roulette_vector = c(-24,-50,100,-350,10)
+# Name poker and roulette
+days_vector = c("Monday","Tuesday","Wednesday","Thursday","Friday")
+names(roulette_vector) = days_vector
+names(poker_vector) = days_vector
+
+# Define new variable based on a selection
+poker_midweek = poker_vector[c(2:4)]
+
+
+==========
+
+# Poker winnings from Monday to Friday
+poker_vector = c(140,-50,20,-120,240)
+# Roulette winnings form Monday to Friday
+roulette_vector = c(-24,-50,100,-350,10)
+# Name poker and roulette
+days_vector = c("Monday","Tuesday","Wednesday","Thursday","Friday")
+names(roulette_vector) = days_vector
+names(poker_vector) = days_vector
+
+# Define new variable based on a selection
+roulette_selection_vector = roulette_vector[c(2:5)]
+
+=====================
+
+# Poker winnings from Monday to Friday
+poker_vector = c(140,-50,20,-120,240)
+# Roulette winnings form Monday to Friday
+roulette_vector = c(-24,-50,100,-350,10)
+# Name poker_vector and roulette_vector
+days_vector = c("Monday","Tuesday","Wednesday","Thursday","Friday")
+names(roulette_vector) = days_vector
+names(poker_vector) = days_vector
+
+average_midweek_gain = mean(poker_vector[c("Monday","Tuesday","Wednesday")])
+
+
+==========
+
+
+# Poker winnings from Monday to Friday
+poker_vector = c(140,-50,20,-120,240)
+# Roulette winnings form Monday to Friday
+roulette_vector = c(-24,-50,100,-350,10)
+# Name poker and roulette
+days_vector = c("Monday","Tuesday","Wednesday","Thursday","Friday")
+names(roulette_vector) = days_vector
+names(poker_vector) = days_vector
+
+# What days of the week did you make money on poker
+selection_vector = c( poker_vector > 0)
+
+selection_vector
+
+> selection_vector
+   Monday   Tuesday Wednesday  Thursday    Friday 
+     TRUE     FALSE      TRUE     FALSE      TRUE 
+
+
+===========
+ COOK the condition and then put it in [] 
+
+
+# Poker winnings from Monday to Friday
+poker_vector = c(140,-50,20,-120,240)
+# Roulette winnings form Monday to Friday
+roulette_vector = c(-24,-50,100,-350,10)
+# Name poker and roulette
+days_vector = c("Monday","Tuesday","Wednesday","Thursday","Friday")
+names(roulette_vector) = days_vector
+names(poker_vector) = days_vector
+
+# What days of the week did you make money on poker
+selection_vector = poker_vector > 0
+# Select from poker_vector these days
+poker_winning_days = poker_vector[selection_vector]
+poker_winning_days
+
+> poker_winning_days
+   Monday Wednesday    Friday 
+      140        20       240 
+
+
+============
+
+# Poker winnings from Monday to Friday
+poker_vector = c(140, -50, 20, -120, 240)
+# Roulette winnings form Monday to Friday
+roulette_vector = c(-24, -50, 100, -350, 10)
+# Name poker and roulette
+days_vector = c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+names(roulette_vector) = days_vector
+names(poker_vector) = days_vector
+
+# What days of the week did you make money on roulette
+selection_vector = roulette_vector > 0
+
+# Select from roulette_vector these days
+
+roulette_winning_days= roulette_vector[selection_vector]
+
+roulette_winning_days
+
+i> roulette_winning_days
+Wednesday    Friday 
+      100        10 
+
+
+
+
+
+
+
