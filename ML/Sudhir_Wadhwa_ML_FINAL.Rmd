@@ -1,0 +1,127 @@
+---
+title: "Sudhir_Wadhwa_ML_FINAL"
+author: "Sudhir Wadhwa"
+date: "March 14, 2015"
+output: html_document
+---
+
+---
+title: "Sudhir Wadhwa"
+output: html_document
+---
+
+#Background
+
+Using devices such as Jawbone Up, Nike FuelBand, and Fitbit it is now possible to collect a large amount of data about personal activity relatively inexpensively. These type of devices are part of the quantified self movement - a group of enthusiasts who take measurements about themselves regularly to improve their health, to find patterns in their behavior, or because they are tech geeks. One thing that people regularly do is quantify how much of a particular activity they do, but they rarely quantify how well they do it. In this project, your goal will be to use data from accelerometers on the belt, forearm, arm, and dumbell of 6 participants. They were asked to perform barbell lifts correctly and incorrectly in 5 different ways. More information is available from the website here: http://groupware.les.inf.puc-rio.br/har (see the section on the Weight Lifting Exercise Dataset).
+
+#Data
+
+The training data for this project are available here: [https://d396qusza40orc.cloudfront.net/predmachlearn/pml-training.csv]
+
+The test data are available here: [https://d396qusza40orc.cloudfront.net/predmachlearn/pml-testing.csv]
+
+The data for this project come from this source: [http://groupware.les.inf.puc-rio.br/har]. If you use the document you create for this class for any purpose please cite them as they have been very generous in allowing their data to be used for this kind of assignment.
+
+#What you should submit
+
+The goal of your project is to predict the manner in which they did the exercise. This is the “classe” variable in the training set. You may use any of the other variables to predict with. You should create a report describing how you built your model, how you used cross validation, what you think the expected out of sample error is, and why you made the choices you did. You will also use your prediction model to predict 20 different test cases.
+
+Your submission should consist of a link to a Github repo with your R markdown and compiled HTML file describing your analysis. Please constrain the text of the writeup to < 2000 words and the number of figures to be less than 5. It will make it easier for the graders if you submit a repo with a gh-pages branch so the HTML page can be viewed online (and you always want to make it easy on graders :-).
+You should also apply your machine learning algorithm to the 20 test cases available in the test data above. Please submit your predictions in appropriate format to the programming assignment for automated grading. See the programming assignment for additional details.
+
+
+
+
+## Analysis
+
+### Get the data
+
+Download the training datasets from https://d396qusza40orc.cloudfront.net/predmachlearn/pml-training.csv   
+Download the test dataset from https://d396qusza40orc.cloudfront.net/predmachlearn/pml-testing.csv   
+
+Move the Dataset from download folder to my working folder.       
+Sudhirs-MacBook-Air-2:~ sudhir$ cp ~/Downloads/pml-testing.csv .   
+Sudhirs-MacBook-Air-2:~ sudhir$ cp ~/Downloads/pml-training.csv .   
+
+Now, we are going to study the dataset
+
+
+
+outcome variable is classe, a factor variable with 5 levels. For this data set, “participants were asked to perform one set of 10 repetitions of the Unilateral Dumbbell Biceps Curl in 5 different fashions
+
+* exactly according to the specification (Class A)
+* throwing the elbows to the front (Class B)
+* lifting the dumbbell only halfway (Class C)
+* lowering the dumbbell only halfway (Class D)
+* throwing the hips to the front (Class E)
+
+Both data sets contain columns with all missing values. 
+
+
+### load the dataset into variables 
+
+
+```{r load}
+trainingdataset <- read.csv("/Users/sudhir/pml-training.csv", na.strings=c("NA","#DIV/0!", ""))     
+testingdataset <- read.csv('/Users/sudhir/pml-testing.csv', na.strings=c("NA","#DIV/0!", ""))  
+```
+
+
+
+
+### Get all R Libraries
+```{r libraries, cache=FALSE, message=FALSE}
+library(caret); library(randomForest); library(rpart)
+```
+
+
+
+
+
+### Split Data
+```{r split}
+set.seed(12345)
+S_Trainset <- createDataPartition(trainingdataset$classe, p = 0.8, list = FALSE)
+S_Training <- trainingdataset[S_Trainset , ]
+S_Validation <- trainingdataset[-S_Trainset , ]
+```
+
+
+### CleanUp Data
+
+``` {r CleanUp}
+nzvcol <- nearZeroVar(S_Training)
+S_Training <- S_Training[, -nzvcol]
+
+
+cntlength <- sapply(S_Training, function(x) {
+  sum(!(is.na(x) | x == ""))
+})
+
+
+nullcol <- names(cntlength[cntlength < 0.6 * length(S_Training$classe)])
+descriptcol <- c("X", "user_name", "raw_timestamp_part_1", "raw_timestamp_part_2", 
+                 "cvtd_timestamp", "new_window", "num_window")
+
+excludecols <- c(descriptcol, nullcol)
+S_Training <- S_Training[, !names(S_Training) %in% excludecols]
+
+```
+
+
+
+### Model with Random Forest and Prediction
+
+```{r rf-fail, eval=FALSE, echo=TRUE}
+S_rfModel <- randomForest(classe ~ ., data = S_Training, importance = TRUE, ntrees = 10)
+S_predict <- predict(S_rfModel, S_Training)
+
+S_pvalidation <- predict(S_rfModel, S_Validation)
+print(confusionMatrix(S_pvalidation, S_Validation$classe))
+S_FINALPredictTest <- predict(S_rfModel, testingdataset)
+S_FINALPredictTest
+answers <- as.vector(S_FINALPredictTest)
+```
+
+
+
