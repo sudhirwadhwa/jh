@@ -1,0 +1,6 @@
+.DS_Store
+.idea/*
+output/*
+output/
+tmp/*
+tmp/
